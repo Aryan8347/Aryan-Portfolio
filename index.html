@@ -20,18 +20,69 @@
 </head>
 
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
+    <!-- Ultra-Animated Cybernetic Loader Screen -->
+    <div id="loader" class="cyber-loader-page">
+        <!-- Background WebGL Particle Canvas -->
+        <canvas id="loader-particle-canvas" class="loader-particle-canvas"></canvas>
+        <div class="loader-scanline"></div>
+
+        <!-- Top Telemetry Header Bar -->
+        <div class="loader-telemetry-header">
+            <div class="telemetry-item"><span>SYS_STATUS:</span> ONLINE</div>
+            <div class="telemetry-item"><span>NEURAL_CORES:</span> 16 ACTIVE</div>
+            <div class="telemetry-item"><span>FPS:</span> <span id="loader-fps-text">60.0</span></div>
+        </div>
+
+        <div class="cyber-loader-container">
+            <!-- HUD Corner Brackets -->
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="hud-bracket bottom-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+
+            <!-- Triple Energy Reactor Core -->
+            <div class="loader-core-wrapper">
+                <div class="loader-ring-outer"></div>
+                <div class="loader-ring-mid"></div>
+                <div class="loader-ring-inner"></div>
+                <div class="loader-pulse-glow"></div>
+                <div class="loader-logo-badge">
+                    <span>AP</span><span class="dot">.</span>
+                </div>
+            </div>
+
+            <!-- Live Digital Ticker & Audio Wave Bars -->
+            <div class="loader-wave-bars">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <!-- Progress Box -->
+            <div class="loader-progress-box">
+                <div class="loader-status-bar">
+                    <span class="loader-status-text" id="loader-status-text">INITIALIZING CORE SYSTEM...</span>
+                    <span class="loader-percent" id="loader-percent">0%</span>
+                </div>
+                <div class="loader-bar-track">
+                    <div class="loader-bar-fill" id="loader-bar-fill"></div>
+                    <div class="loader-bar-glow"></div>
+                    <div class="loader-bar-scanner"></div>
+                </div>
+            </div>
+
+            <!-- Footer Terminal Tag -->
+            <div class="loader-terminal-tag">ARYAN PATEL &bull; AI & DATA SCIENCE PORTFOLIO 2026</div>
+        </div>
     </div>
 
     <!-- 3D Background -->
     <canvas id="webgl-canvas"></canvas>
 
     <nav>
-        <div class="logo">A<span>.</span></div>
+        <div class="logo">AP<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -43,8 +94,8 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <div class="tagline">Welcome to the future</div>
-                <h1 class="glitch-text" data-text="Aryan">Aryan</h1>
-                <h2>Data Scientist <br>& AI Developer</h2>
+                <h1 class="glitch-text" data-text="Aryan Patel">Aryan Patel</h1>
+                <h2><span id="typing-text"></span><span class="typed-cursor">|</span></h2>
                 <p>Driven by curiosity to uncover insights from data and develop impactful, intelligent solutions. Grand
                     Finalist at Smart India Hackathon (SIH) 2025.</p>
                 <div class="btn-group">
@@ -59,30 +110,29 @@
             <div class="about-container">
                 <div class="about-text">
                     <span class="section-subtitle">01. Who I Am</span>
-                    <h2 class="section-title"> Data Scientist</h2>
-                    <p>I am a Data Scientist passionate about transforming raw data
-                        into meaningful intelligence. My work spans Machine Learning,
-                        Predictive Modeling, Data Analytics, Business Intelligence,
-                        and AI-driven Automation — building systems that don't just
-                        analyze data, but act on it.<br><br>
+                    <h2 class="section-title">Data Scientist & AI Engineer</h2>
+                    <p>I am a Data Scientist, Machine Learning Engineer, and Software Developer passionate about
+                        transforming raw data into intelligent software solutions. My work spans Data Analysis,
+                        Predictive Modeling, Machine Learning, AI-driven Automation, and Software Development — building
+                        end-to-end systems that don't just analyze data, but act on it.<br><br>
 
-                        From forecasting market demand to evaluating enterprise
-                        documents with NLP, I design end-to-end data pipelines and
-                        intelligent models that solve real-world problems with
-                        precision and clarity.<br><br>
+                        From forecasting market demand to evaluating enterprise documents with NLP and building custom
+                        software solutions, I design scalable data pipelines, AI models, and applications that solve
+                        real-world problems with precision and clarity.<br><br>
 
-                        I don't just work with data — I make it work.</p>
+                        I don't just work with data — I engineer intelligent solutions.</p>
                     <div class="skills-container">
                         <div class="skill-category">
                             <h3>Data & AI</h3>
                             <div class="skill-tags">
-                                <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+                                <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>PyTorch</span><span>NLP</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h3>Tools & DB</h3>
+                            <h3>Software & Tools</h3>
                             <div class="skill-tags">
-                                <span>PostgreSQL</span><span>Git</span><span>Jupyter</span><span>Streamlit</span>
+                                <span>JavaScript</span><span>MS
+                                    SQL</span><span>PostgreSQL</span><span>Git</span><span>Jupyter</span><span>Streamlit</span>
                             </div>
                         </div>
                     </div>
@@ -93,57 +143,179 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <span class="section-subtitle">02. Selected Work</span>
-            <h2 class="section-title text-center">Featured Projects</h2>
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <span class="section-subtitle text-center">02. My Journey</span>
+            <h2 class="section-title text-center">Work <span class="gradient-text">Experience</span></h2>
+            <p class="section-desc text-center">Professional engineering experience in AI Development, Data Science,
+                Python & MS SQL Backend Architecture.</p>
 
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image" id="proj-1-3d"></div>
-                    <div class="project-info">
-                        <h3>RetailSense AI</h3>
-                        <p>AI-driven retail analytics system for sales analysis, demand forecasting (Prophet), and an
-                            interactive Copilot for business queries.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>Streamlit</span><span>Prophet</span>
+            <div class="timeline-container">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+
+                <!-- Experience 1: Taranjot -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <span class="exp-date">July 2026 — Present</span>
+                            <h3 class="exp-role">AI & Backend Software Developer</h3>
+                            <div class="exp-company">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                    <path d="M9 22v-4h6v4"></path>
+                                    <path d="M8 6h.01"></path>
+                                    <path d="M16 6h.01"></path>
+                                    <path d="M12 6h.01"></path>
+                                    <path d="M12 10h.01"></path>
+                                    <path d="M12 14h.01"></path>
+                                    <path d="M16 10h.01"></path>
+                                    <path d="M16 14h.01"></path>
+                                    <path d="M8 10h.01"></path>
+                                    <path d="M8 14h.01"></path>
+                                </svg>
+                                <span>Taranjot</span>
+                            </div>
                         </div>
-                        <a href="#" class="btn-link">View Project →</a>
+                        <p class="exp-desc">
+                            Serving as AI Developer while driving core backend software engineering using Python and MS
+                            SQL. Designing robust database procedures, high-performance API services, data processing
+                            pipelines, and integrating intelligent AI components into enterprise backend architectures.
+                        </p>
+                        <div class="exp-tags">
+                            <span>AI Development</span>
+                            <span>Python</span>
+                            <span>MS SQL</span>
+                            <span>Backend Engineering</span>
+                            <span>API Architecture</span>
+                            <span>Database Systems</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" id="proj-2-3d"></div>
-                    <div class="project-info">
-                        <h3>Internship Recommender</h3>
-                        <p>AI-driven system matching student profiles with relevant internships using skill extraction,
-                            NLP, and resume parsing algorithms.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>NLP</span><span>Scikit-learn</span>
+                <!-- Experience 2: Bitcodify -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <span class="exp-date">Feb 2026 — July 2026</span>
+                            <h3 class="exp-role">Data Science Engineer</h3>
+                            <div class="exp-company">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                <span>Bitcodify</span>
+                            </div>
                         </div>
-                        <a href="#" class="btn-link">View Project →</a>
+                        <p class="exp-desc">
+                            Spearheaded data science and analytics workflows, exploratory data analysis (EDA),
+                            predictive statistical modeling, and automated data processing pipelines leveraging Python
+                            and machine learning algorithms.
+                        </p>
+                        <div class="exp-tags">
+                            <span>Data Science</span>
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analytics</span>
+                            <span>Pandas</span>
+                            <span>Predictive Modeling</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" id="proj-3-3d"></div>
-                    <div class="project-info">
-                        <h3>AI-Based DPR Evaluation</h3>
-                        <p>National-level problem statement project developed for the Smart India Hackathon (SIH) 2025
-                            by MDoNER (Government of India).</p>
-                        <div class="tech-stack">
-                            <span>AI Analytics</span><span>Data Science</span>
-                        </div>
-                        <a href="#" class="btn-link">View Project →</a>
+            </div>
+        </section>
+
+        <!-- Projects Section - Cybernetic Pinned 3D Project Deck -->
+        <section id="projects" class="cyber-reel-section">
+            <div class="cyber-pin-container">
+                <div class="cyber-reel-header">
+                    <span class="section-subtitle text-center">OUR PORTFOLIO</span>
+                    <h2 class="section-title text-center">Projects We've <span class="gradient-text">Engineered</span>
+                    </h2>
+                    <div class="reel-issuing-counter" id="reel-issuing-counter">ISSUING 01 / 10</div>
+
+                    <!-- Category Filter Pills -->
+                    <div class="reel-filter-bar">
+                        <button class="reel-filter-btn active" data-filter="all">( VIEW ALL PROJECTS ↗ )</button>
+                        <button class="reel-filter-btn" data-filter="ai">( AI & ML )</button>
+                        <button class="reel-filter-btn" data-filter="analytics">( DATA ANALYTICS )</button>
+                        <button class="reel-filter-btn" data-filter="software">( SOFTWARE )</button>
                     </div>
+                </div>
+
+                <!-- Ribbed 3D Dispenser Slot Bar -->
+                <div class="dispenser-bar-wrapper">
+                    <div class="dispenser-bar">
+                        <div class="dispenser-left-group">
+                            <div class="dispenser-barcode"></div>
+                            <div class="dispenser-status-pill">
+                                <span class="dispenser-led"></span>
+                                <span class="dispenser-status-text">DISPENSER ACTIVE</span>
+                            </div>
+                        </div>
+                        <div class="dispenser-right-group">
+                            <span class="dispenser-label">ARYAN PATEL &bull; PORTFOLIO REEL</span>
+                        </div>
+                    </div>
+                    <div class="dispenser-teeth"></div>
+                </div>
+
+                <!-- Pinned Single-Slot 3D Card Dispenser Viewport -->
+                <div class="ticket-dispenser-viewport" id="ticket-dispenser-viewport">
+                    <!-- Dynamic Project Ticket Cards Rendered & Stacked Here by JS -->
                 </div>
             </div>
         </section>
 
+        <!-- Full-Screen Interactive 3D Project Detail Modal -->
+        <div class="project-modal-overlay" id="project-modal">
+            <div class="project-modal-container">
+                <button class="modal-close-btn" id="modal-close-btn">✕ CLOSE</button>
+
+                <div class="modal-grid">
+                    <!-- Left Column: 3D WebGL Hologram Viewport Stage -->
+                    <div class="modal-3d-col">
+                        <div id="modal-3d-canvas" class="modal-3d-canvas"></div>
+                        <div class="modal-3d-hint">Drag or move mouse to tilt 3D hologram</div>
+                    </div>
+
+                    <!-- Right Column: Full Details -->
+                    <div class="modal-info-col">
+                        <div class="modal-header-row">
+                            <span class="modal-num" id="modal-num">01 / 10</span>
+                            <span class="modal-badge" id="modal-badge">SIH 2025 Finalist</span>
+                        </div>
+
+                        <h3 class="modal-title" id="modal-title">SIH AI DPR Evaluator System</h3>
+                        <div class="modal-impact" id="modal-impact">⚡ 98% Review Speedup</div>
+
+                        <p class="modal-desc" id="modal-desc">Comprehensive project architecture description populated
+                            dynamically by JS.</p>
+
+                        <div class="modal-tech-section">
+                            <h4>TECHNOLOGY STACK</h4>
+                            <div class="modal-tech-tags" id="modal-tech-tags"></div>
+                        </div>
+
+                        <div class="modal-actions">
+                            <a href="#" target="_blank" class="btn btn-primary" id="modal-github-link">GitHub Source
+                                ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="contact-box">
-                <span class="section-subtitle">03. What's Next?</span>
+                <span class="section-subtitle">04. What's Next?</span>
                 <h2 class="section-title">Get In Touch</h2>
                 <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll
                     try my best to get back to you!</p>
