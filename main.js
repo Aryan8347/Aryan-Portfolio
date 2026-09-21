@@ -21,7 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- SCROLL ANIMATIONS ---
     initScrollAnimations();
+
+    // --- CONTACT FORM MAILTO INTEGRATION ---
+    initContactForm();
 });
+
+// --- CONTACT FORM MAILTO INTEGRATION ---
+function initContactForm() {
+    const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputs = contactForm.querySelectorAll('input');
+        const nameVal = inputs[0] ? inputs[0].value.trim() : '';
+        const emailVal = inputs[1] ? inputs[1].value.trim() : '';
+        const messageVal = contactForm.querySelector('textarea') ? contactForm.querySelector('textarea').value.trim() : '';
+
+        const subject = encodeURIComponent(`Portfolio Inquiry from ${nameVal || 'Visitor'}`);
+        const body = encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`);
+
+        window.location.href = `mailto:patelaryanjayeshbhai@gmail.com?subject=${subject}&body=${body}`;
+    });
+}
 
 // --- CYBERNETIC ANIMATED LOADER ---
 function initCyberneticLoader(onComplete) {
