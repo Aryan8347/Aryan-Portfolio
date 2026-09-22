@@ -583,10 +583,10 @@ function initCyberneticProjectReel() {
         {
             id: 1,
             num: "01",
-            title: "AI-Powered DPR Quality & Risk System",
-            category: "ai analytics",
+            title: "SIH AI DPR Evaluator System",
+            category: "ai",
             badge: "SIH 2025 Finalist • AI & RAG",
-            impact: "98% Review Speedup & Risk Scoring",
+            impact: "Dramatically Faster DPR Review & Risk Scoring",
             desc: "Automates the analysis and quality assessment of 300+ page Detailed Project Reports (DPRs) for roads, healthcare, and tourism infrastructure. Features text/BOQ extraction, red-flag detection, RAG document intelligence, and automated risk scoring.",
             features: [
                 "RAG Document Intelligence engine parsing 300+ page Detailed Project Reports (DPRs) across road, healthcare, and tourism sectors.",
@@ -595,7 +595,7 @@ function initCyberneticProjectReel() {
                 "Executive dashboard presenting high-risk flag alerts, confidence scores, and instant automated query responses.",
                 "Firebase integration for secure cloud file storage and multi-user audit tracking."
             ],
-            tech: ["Python", "FastAPI", "RAG Engine", "Ollama / Local AI", "PaddleOCR", "Table Transformer", "SQL", "Firebase"],
+            tech: ["Python", "FastAPI", "HTML", "CSS", "JavaScript", "RAG Engine", "Ollama / Local AI", "PaddleOCR", "Tesseract", "Table Transformer", "OCR", "PDF Extraction", "SQL", "Firebase"],
             color: 0x00f2fe,
             geomType: "torusKnot"
         },
@@ -603,18 +603,18 @@ function initCyberneticProjectReel() {
             id: 2,
             num: "02",
             title: "RetailSense-AI Analytics Copilot",
-            category: "ai analytics",
+            category: "ai",
             badge: "AI Business Intelligence",
             impact: "Sales & Revenue Forecasting",
             desc: "AI-driven retail intelligence platform converting raw CSV sales data into interactive analytics. Features automated data cleaning, outlier detection, customer clustering, 7-day revenue forecasting, and KPI dashboards.",
             features: [
                 "Automated data ingestion & cleaning engine converting raw retail transactional CSVs into sanitized data models.",
                 "Advanced exploratory data analysis (EDA) identifying revenue drivers, high-performing categories, and seasonal trends.",
-                "Machine Learning clustering algorithms for RFM (Recency, Frequency, Monetary) customer segmentation.",
+                "ML-based customer segmentation & clustering algorithms.",
                 "Predictive revenue forecasting engine generating 7-day automated sales projections and inventory stock recommendations.",
                 "Interactive Streamlit dashboard with real-time dynamic charts and automated KPI metrics."
             ],
-            tech: ["Python", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "Machine Learning", "Data Visualization"],
+            tech: ["Python", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "Machine Learning", "Data Analysis", "Data Visualization", "CSV Processing"],
             color: 0x00ffcc,
             geomType: "icosahedron"
         },
@@ -622,7 +622,7 @@ function initCyberneticProjectReel() {
             id: 3,
             num: "03",
             title: "AI Resume Analyzer — BreachBunny",
-            category: "ai software",
+            category: "ai",
             badge: "Talent Intelligence Platform",
             impact: "Automated HR Screening & RAG",
             desc: "AI-powered recruitment platform for resume PDF parsing, skill extraction, candidate experience evaluation, recruiter email integration, and Llama 3.2 local model scoring.",
@@ -633,7 +633,7 @@ function initCyberneticProjectReel() {
                 "Custom candidate dashboard comparing applicant skills against job descriptions in real-time.",
                 "Role-Based Access Control (RBAC) with JWT authorization protecting recruiter candidate lists."
             ],
-            tech: ["React 18", "Vite", "Tailwind CSS", "Python", "FastAPI", "RAG", "SQL", "JWT", "Ollama", "PyMuPDF"],
+            tech: ["React 18", "Vite", "Tailwind CSS", "Python", "FastAPI", "RAG", "SQL", "JWT", "Ollama", "Llama 3.2", "PyMuPDF"],
             color: 0x38bdf8,
             geomType: "octahedron"
         },
@@ -641,14 +641,14 @@ function initCyberneticProjectReel() {
             id: 4,
             num: "04",
             title: "CareerSetu – Internship Recommender",
-            category: "ai analytics",
-            badge: "NLP Recommendation Engine",
+            category: "ai",
+            badge: "Skill-and-Attribute Matching Engine",
             impact: "Personalized Candidate Matching",
             desc: "Intelligent recommendation engine matching candidate profiles, technical skills, and academic qualifications with personalized internship opportunities.",
             features: [
-                "Natural Language Processing (NLP) profile analyzer matching student skills with industry internship requirements.",
+                "Skill-and-attribute profile analyzer matching student qualifications with industry internship requirements.",
                 "Automated candidate scoring matrix ranking applicants based on domain relevance, project history, and tech stack.",
-                "Dynamic search & filter system for quick navigation across 100+ internship categories and skill sets.",
+                "Dynamic search & filter system for quick navigation across diverse internship categories and skill sets.",
                 "Enterprise admin panel for managing recruiter listings, application statuses, and candidate recommendations.",
                 "High-performance Python backend handling REST API responses with zero latency."
             ],
@@ -659,84 +659,46 @@ function initCyberneticProjectReel() {
         {
             id: 5,
             num: "05",
-            title: "Taranjot Resources ERP System",
-            category: "software",
-            badge: "Enterprise ERP Portal",
-            impact: "Multi-Branch Supply Chain & Orders",
-            desc: "Enterprise Resource Planning system for coal and industrial resource operations. Manages multi-branch orders, user roles, stored procedure workflows, and real-time operational dashboards.",
+            title: "Fuel Reconciliation & Variance Dashboard",
+            category: "analytics",
+            badge: "Automated Fleet Audit Engine",
+            impact: "Automated Fuel Theft & Overbilling Detection",
+            desc: "Automated dual-engine fuel reconciliation system unifying internal fleet refuel logs with HP Petroleum vendor statements to catch theft, overbilling, and liter mismatches.",
             features: [
-                "Multi-branch order fulfillment pipeline for coal and industrial material trade operations.",
-                "High-performance MS SQL stored procedures handling inventory balances, ledger entries, and tax calculations.",
-                "Granular role-based access control (RBAC) securing financial records, sales orders, and customer master data.",
-                "Executive analytics dashboard displaying real-time branch performance, daily dispatch totals, and pending payments.",
-                "Production deployment on Windows Server IIS environment with high uptime reliability."
+                "Dual-engine audit software comparing internal fleet refuel logs with HP Petroleum vendor statements.",
+                "Automated Excel/CSV data normalization handling varied multi-sheet format inputs from multiple transporters.",
+                "Intelligent variance detection flagging fuel volume discrepancies, unrecorded fill-ups, and price per liter mismatches.",
+                "Executive audit report generator producing zero-loss fuel audit summaries with instant CSV exports.",
+                "Browser-based SheetJS data processing engine executing audit logic with zero client installation."
             ],
-            tech: ["Python", "FastAPI", "REST APIs", "Microsoft SQL Server", "Stored Procedures", "IIS", "Windows Server"],
-            color: 0x00f2fe,
-            geomType: "cyberRing"
+            tech: ["Python (Pandas)", "JavaScript (ES6+)", "HTML5/CSS3", "SheetJS (XLSX)", "FontAwesome", "OpenPyXL", "CSV Export"],
+            color: 0x00e5ff,
+            geomType: "torusKnot"
         },
         {
             id: 6,
             num: "06",
-            title: "ERP App Textile — HRMS & Attendance",
-            category: "software",
-            badge: "Enterprise HRMS & Logistics",
-            impact: "Geofenced Attendance & HR Control",
-            desc: "Enterprise HRMS and employee attendance management platform featuring selfie/GPS check-in, geofencing validation, shift/leave regularization, and inventory order control.",
+            title: "Order Analytics Environment Dashboard",
+            category: "analytics",
+            badge: "Real-Time P&L & Port Logistics",
+            impact: "Live Activity Ticker & Stock Clearance",
+            desc: "Real-time bulk commodity analytics dashboard tracking live sales orders, delivery orders (DO), lifting progress, regional profit margins, vessel tracking, and port stock clearance.",
             features: [
-                "Geofenced mobile selfie check-in with GPS validation preventing proxy attendance across multi-location textile units.",
-                "Automated shift management, leave request workflows, overtime computation, and monthly payroll processing.",
-                "Material order tracking system linking textile production inventory with dispatch logistics.",
-                "Real-time HR analytics portal providing attendance heatmaps, late-mark flags, and workforce productivity metrics.",
-                "Secure RESTful API architecture connecting mobile check-in apps with MS SQL database."
+                "Real-time P&L tracking dashboard visualizing live sales orders, delivery orders (DO), and lifting progress.",
+                "Regional profit margin analyzer computing gross margins across different discharge ports and customer tiers.",
+                "Port stock clearance monitor tracking vessel laytime, demurrage risks, and warehouse storage status.",
+                "Automated live activity ticker displaying real-time order bookings, payments, and dispatch notifications.",
+                "Cloudflare Worker proxy integration securing backend API endpoints and data feeds."
             ],
-            tech: ["Python", "REST APIs", "Microsoft SQL Server", "Stored Procedures", "JWT", "IIS", "Geofencing"],
+            tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Python", "FastAPI", "Cloudflare Worker Proxy", "JWT Authentication", "Vercel"],
             color: 0x00ffcc,
-            geomType: "crystal"
+            geomType: "multiSphere"
         },
         {
             id: 7,
             num: "07",
-            title: "Branch Label Approval & Delivery System",
-            category: "software",
-            badge: "Secure Internal Logistics",
-            impact: "Head-Office Approval Workflow",
-            desc: "Secure multi-branch label delivery tracking system routing inter-city branch label requests through Head Office approval across 150+ branches and 250+ users.",
-            features: [
-                "Centralized approval workflow routing label request tickets from 150+ retail branches to Head Office.",
-                "Multi-tier role permissions separating branch requesters, regional managers, and HO fulfillment officers.",
-                "Live delivery tracking and dispatch status logs covering 250+ active enterprise users.",
-                "Automated audit trail recording approval timestamps, printed label volumes, and branch dispatch receipts.",
-                "Secure private server host architecture with encrypted MS SQL database connections."
-            ],
-            tech: ["Python", "REST APIs", "Microsoft SQL Server", "Role-Based Access", "Private Server Security"],
-            color: 0x00d2c4,
-            geomType: "hyperSphere"
-        },
-        {
-            id: 8,
-            num: "08",
-            title: "Basilico Pizzeria – AI QR Review System",
-            category: "ai software",
-            badge: "Customer Engagement AI",
-            impact: "AI Review Generator & Redirection",
-            desc: "Mobile-first QR review collection system generating human-like customer feedback options and 1-click Google Review redirection for restaurants.",
-            features: [
-                "Mobile-optimized QR landing page allowing restaurant guests to select rating feedback in seconds.",
-                "AI-assisted feedback text generator providing customers with pre-written, natural review suggestions.",
-                "Smart 1-click redirection routing 4 & 5 star reviews directly to Google Business Profile for maximum rating boost.",
-                "Internal management feedback capture for 1-3 star reviews enabling private resolution before online posting.",
-                "Zero-dependency lightweight frontend deployed on Vercel for instant mobile page loading."
-            ],
-            tech: ["HTML5", "CSS3", "JavaScript", "Vercel", "QR Code Engine", "Google Review API"],
-            color: 0x38bdf8,
-            geomType: "coneRing"
-        },
-        {
-            id: 9,
-            num: "09",
             title: "Coal Company Order Dashboard & Portal",
-            category: "analytics",
+            category: "software",
             badge: "Global Operations Portal",
             impact: "Multi-Origin Resource Tracking",
             desc: "Enterprise digital platform presenting coal supply origins (India, Indonesia, South Africa, Australia, Russia, China, Colombia), international suppliers, and energy solutions.",
@@ -752,84 +714,27 @@ function initCyberneticProjectReel() {
             geomType: "meshCube"
         },
         {
-            id: 10,
-            num: "10",
-            title: "Order Analytics Environment Dashboard",
-            category: "analytics software",
-            badge: "Real-Time P&L & Port Logistics",
-            impact: "Live Activity Ticker & Stock Clearance",
-            desc: "Real-time bulk commodity analytics dashboard tracking live sales orders, delivery orders (DO), lifting progress, regional profit margins, vessel tracking, and port stock clearance.",
-            features: [
-                "Real-time P&L tracking dashboard visualizing live sales orders, delivery orders (DO), and lifting progress.",
-                "Regional profit margin analyzer computing gross margins across different discharge ports and customer tiers.",
-                "Port stock clearance monitor tracking vessel laytime, demurrage risks, and warehouse storage status.",
-                "Automated live activity ticker displaying real-time order bookings, payments, and dispatch notifications.",
-                "Cloudflare Worker proxy integration securing backend API endpoints and data feeds."
-            ],
-            tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Python", "FastAPI", "Cloudflare Worker Proxy", "Vercel"],
-            color: 0x00ffcc,
-            geomType: "multiSphere"
-        },
-        {
-            id: 11,
-            num: "11",
-            title: "Fuel Reconciliation & Variance Dashboard",
-            category: "analytics software",
-            badge: "Automated Fleet Audit Engine",
-            impact: "Zero-Loss Fuel Theft Detection",
-            desc: "Automated dual-engine fuel reconciliation system unifying internal fleet refuel logs with HP Petroleum vendor statements to catch theft, overbilling, and liter mismatches.",
-            features: [
-                "Dual-engine audit software comparing internal fleet refuel logs with HP Petroleum vendor statements.",
-                "Automated Excel/CSV data normalization handling varied multi-sheet format inputs from multiple transporters.",
-                "Intelligent variance detection flagging fuel volume discrepancies, unrecorded fill-ups, and price per liter mismatches.",
-                "Executive audit report generator producing zero-loss fuel audit summaries with instant CSV exports.",
-                "Browser-based SheetJS data processing engine executing audit logic with zero client installation."
-            ],
-            tech: ["Python (Pandas)", "JavaScript (ES6+)", "HTML5/CSS3", "SheetJS (XLSX)", "OpenPyXL", "CSV Export"],
-            color: 0x00e5ff,
-            geomType: "torusKnot"
-        },
-        {
-            id: 12,
-            num: "12",
-            title: "Field Employee Tracking & Management",
+            id: 8,
+            num: "08",
+            title: "Taranjot Resources ERP System",
             category: "software",
-            badge: "Bitcodify Internship Project",
-            impact: "Live GPS Tracking & Flutter App",
-            desc: "Full-stack workforce management platform (developed at Bitcodify Solutions) with Flutter mobile app and Web Admin Portal featuring selfie + GPS check-in, 2-min live tracking, and order/payment collections.",
+            badge: "Enterprise ERP Portal",
+            impact: "Multi-Branch Supply Chain & Orders",
+            desc: "Enterprise Resource Planning system for coal and industrial resource operations. Manages multi-branch orders, user roles, stored procedure workflows, and real-time operational dashboards.",
             features: [
-                "Cross-platform Flutter mobile application equipped with background GPS location tracking (2-min interval updates).",
-                "Selfie + GPS attendance check-in ensuring verified field employee location validation.",
-                "On-field order capture & payment collection recording real-time customer transactions during client visits.",
-                "Web admin portal rendering real-time employee movement paths, visit logs, and daily route histories.",
-                "High-speed FastAPI backend handling location telemetry streams and MS SQL procedure updates."
+                "Multi-branch order fulfillment pipeline for coal and industrial material trade operations.",
+                "High-performance MS SQL stored procedures handling inventory balances, ledger entries, and tax calculations.",
+                "Granular role-based access control (RBAC) securing financial records, sales orders, and customer master data.",
+                "Executive analytics dashboard displaying real-time branch performance, daily dispatch totals, and pending payments.",
+                "Production deployment on Windows Server IIS environment with high uptime reliability."
             ],
-            tech: ["Python", "FastAPI", "Microsoft SQL Server", "Stored Procedures", "JWT", "Flutter/Dart", "Postman", "Git"],
-            color: 0x38bdf8,
-            geomType: "icosahedron"
+            tech: ["Python", "FastAPI", "REST APIs", "Microsoft SQL Server", "Stored Procedures", "IIS", "Windows Server", "GitHub Actions", "NSSM"],
+            color: 0x00f2fe,
+            geomType: "cyberRing"
         },
         {
-            id: 13,
-            num: "13",
-            title: "Enterprise IT Asset Management Dashboard",
-            category: "analytics software",
-            badge: "IT Infrastructure & Compliance",
-            impact: "Sophos XDR & Asset Audit Logs",
-            desc: "Centralized IT asset management portal tracking hardware lifecycle, software licenses, Sophos XDR security compliance, USB blocking, printer inventories, and automated Excel data pipelines.",
-            features: [
-                "Centralized hardware & software asset inventory tracking laptops, servers, printers, and peripheral devices.",
-                "Sophos XDR security compliance monitoring flagging unauthorized USB usage, out-of-date antivirus, and vulnerabilities.",
-                "Automated Excel data processing pipeline consolidating asset audit sheets from multiple branch locations.",
-                "License expiration and warranty reminder dashboard preventing software downtime and compliance penalties.",
-                "Interactive Flask web interface with dynamic Chart.js reporting and automated data export capabilities."
-            ],
-            tech: ["Python 3.x", "Flask", "Microsoft SQL Server", "pyodbc / pymssql", "Pandas", "OpenPyXL", "JavaScript", "Chart.js"],
-            color: 0x00d2c4,
-            geomType: "dodecahedron"
-        },
-        {
-            id: 14,
-            num: "14",
+            id: 9,
+            num: "09",
             title: "Taranjot Web ERP — Enterprise System",
             category: "software",
             badge: "Taranjot Resources ERP v2.0",
@@ -842,9 +747,104 @@ function initCyberneticProjectReel() {
                 "Dynamic permission matrix restricting tab views, action buttons, and financial data per user role.",
                 "Modern React 19 architecture backed by Python FastAPI services and Microsoft SQL Server procedures."
             ],
-            tech: ["React 19", "Vite", "Python (FastAPI)", "Vanilla CSS", "Lucide React", "Microsoft SQL Server", "REST APIs", "IIS"],
+            tech: ["React 19", "Vite", "Python (FastAPI)", "Vanilla CSS", "Lucide React", "Microsoft SQL Server", "REST APIs", "JWT Authentication", "IIS"],
             color: 0x00ffcc,
             geomType: "octahedron"
+        },
+        {
+            id: 10,
+            num: "10",
+            title: "ERP App Textile — HRMS & Attendance",
+            category: "software",
+            badge: "Enterprise HRMS & Logistics",
+            impact: "Geofenced Attendance & HR Control",
+            desc: "Enterprise HRMS and employee attendance management platform featuring selfie/GPS check-in, geofencing validation, shift/leave regularization, and inventory order control.",
+            features: [
+                "Geofenced mobile selfie check-in with GPS validation preventing proxy attendance across multi-location textile units.",
+                "Automated shift management, leave request workflows, overtime computation, and monthly payroll processing.",
+                "Material order tracking system linking textile production inventory with dispatch logistics.",
+                "Real-time HR analytics portal providing attendance heatmaps, late-mark flags, and workforce productivity metrics.",
+                "Secure RESTful API architecture connecting mobile check-in apps with MS SQL database."
+            ],
+            tech: ["Python", "REST APIs", "Microsoft SQL Server", "Stored Procedures", "JWT", "IIS", "GitHub Actions", "Geofencing"],
+            color: 0x00ffcc,
+            geomType: "crystal"
+        },
+        {
+            id: 11,
+            num: "11",
+            title: "Branch Label Approval & Delivery System",
+            category: "software",
+            badge: "Secure Internal Logistics",
+            impact: "Head-Office Approval Workflow",
+            desc: "Secure multi-branch label delivery tracking system routing inter-city branch label requests through Head Office approval. Architected to scale across 150+ branches and 250+ enterprise users.",
+            features: [
+                "Centralized approval workflow routing label request tickets from retail branches to Head Office.",
+                "Multi-tier role permissions separating branch requesters, regional managers, and HO fulfillment officers.",
+                "Live delivery tracking and dispatch status logs covering enterprise users.",
+                "Automated audit trail recording approval timestamps, printed label volumes, and branch dispatch receipts.",
+                "Secure private server host architecture with encrypted MS SQL database connections."
+            ],
+            tech: ["Python", "REST APIs", "Microsoft SQL Server", "Role-Based Access", "Private Server Security", "Automated Backup"],
+            color: 0x00d2c4,
+            geomType: "hyperSphere"
+        },
+        {
+            id: 12,
+            num: "12",
+            title: "Enterprise IT Asset Management Dashboard",
+            category: "software",
+            badge: "IT Infrastructure & Compliance",
+            impact: "Sophos XDR & Asset Audit Logs",
+            desc: "Centralized IT asset management portal tracking hardware lifecycle, software licenses, Sophos XDR security compliance, USB blocking, printer inventories, and automated Excel data pipelines.",
+            features: [
+                "Centralized hardware & software asset inventory tracking laptops, servers, printers, and peripheral devices.",
+                "Sophos XDR security compliance monitoring flagging unauthorized USB usage, out-of-date antivirus, and vulnerabilities.",
+                "Automated Excel data processing pipeline consolidating asset audit sheets from multiple branch locations.",
+                "License expiration and warranty reminder dashboard preventing software downtime and compliance penalties.",
+                "Interactive Flask web interface with dynamic Chart.js reporting and automated data export capabilities."
+            ],
+            tech: ["Python 3.x", "Flask", "Microsoft SQL Server", "pyodbc / pymssql", "Pandas", "OpenPyXL", "HTML5", "CSS3", "JavaScript", "Chart.js", "Font Awesome"],
+            color: 0x00d2c4,
+            geomType: "dodecahedron"
+        },
+        {
+            id: 13,
+            num: "13",
+            title: "Field Employee Tracking & Management System",
+            category: "software",
+            badge: "Bitcodify Internship Project",
+            impact: "Live GPS Tracking & Flutter App",
+            desc: "Full-stack workforce management platform (developed at Bitcodify Solutions) with Flutter mobile app and Web Admin Portal featuring selfie + GPS check-in, 2-min live tracking, and order/payment collections.",
+            features: [
+                "Cross-platform Flutter mobile application equipped with background GPS location tracking (2-min interval updates).",
+                "Selfie + GPS attendance check-in ensuring verified field employee location validation.",
+                "On-field order capture & payment collection recording real-time customer transactions during client visits.",
+                "Web admin portal rendering real-time employee movement paths, visit logs, and daily route histories.",
+                "High-speed FastAPI backend handling location telemetry streams and MS SQL procedure updates."
+            ],
+            tech: ["Python", "FastAPI", "Microsoft SQL Server", "Stored Procedures", "JWT", "Flutter/Dart", "HTML/CSS/JavaScript", "Postman", "Git"],
+            color: 0x38bdf8,
+            geomType: "icosahedron"
+        },
+        {
+            id: 14,
+            num: "14",
+            title: "Basilico Pizzeria — QR Review System",
+            category: "software",
+            badge: "Customer Engagement AI",
+            impact: "AI Review Generator & Redirection",
+            desc: "Mobile-first QR review collection system generating human-like customer feedback options and 1-click Google Review redirection for restaurants.",
+            features: [
+                "Mobile-optimized QR landing page allowing restaurant guests to select rating feedback in seconds.",
+                "AI-assisted feedback text generator providing customers with pre-written, natural review suggestions.",
+                "Smart 1-click redirection routing 4 & 5 star reviews directly to Google Business Profile for maximum rating boost.",
+                "Internal management feedback capture for 1-3 star reviews enabling private resolution before online posting.",
+                "Zero-dependency lightweight frontend deployed on Vercel for instant mobile page loading."
+            ],
+            tech: ["HTML5", "CSS3", "JavaScript", "Vercel", "QR Code Engine", "Google Review API"],
+            color: 0x38bdf8,
+            geomType: "coneRing"
         }
     ];
 
@@ -1038,13 +1038,25 @@ function initProjectModal() {
         // SVG Mapping for Tech Stack Logos (Only Logos, No Text, No Background Boxes)
         const techSvgMap = {
             "Python": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M11.87 2c-5.18 0-4.84 2.25-4.84 2.25l.01 2.33h4.9v.7H5.15S2 6.91 2 12.12c0 5.21 2.76 5.03 2.76 5.03h1.64v-2.34s-.09-2.76 2.72-2.76h4.68s2.59.04 2.59-2.52V4.8s.35-2.8-4.52-2.8zM9.44 3.56a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82z" fill="#3776AB"/><path d="M12.13 22c5.18 0 4.84-2.25 4.84-2.25l-.01-2.33h-4.9v-.7h6.79s3.15.37 3.15-4.84c0-5.21-2.76-5.03-2.76-5.03h-1.64v2.34s.09 2.76-2.72 2.76h-4.68s-2.59-.04-2.59 2.52v4.73s-.35 2.8 4.52 2.8zm2.43-1.56a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z" fill="#FFD43B"/></svg>`,
+            "Python 3.x": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M11.87 2c-5.18 0-4.84 2.25-4.84 2.25l.01 2.33h4.9v.7H5.15S2 6.91 2 12.12c0 5.21 2.76 5.03 2.76 5.03h1.64v-2.34s-.09-2.76 2.72-2.76h4.68s2.59.04 2.59-2.52V4.8s.35-2.8-4.52-2.8zM9.44 3.56a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82z" fill="#3776AB"/><path d="M12.13 22c5.18 0 4.84-2.25 4.84-2.25l-.01-2.33h-4.9v-.7h6.79s3.15.37 3.15-4.84c0-5.21-2.76-5.03-2.76-5.03h-1.64v2.34s.09 2.76-2.72 2.76h-4.68s-2.59-.04-2.59 2.52v4.73s-.35 2.8 4.52 2.8zm2.43-1.56a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z" fill="#FFD43B"/></svg>`,
+            "Python (Pandas)": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M11.87 2c-5.18 0-4.84 2.25-4.84 2.25l.01 2.33h4.9v.7H5.15S2 6.91 2 12.12c0 5.21 2.76 5.03 2.76 5.03h1.64v-2.34s-.09-2.76 2.72-2.76h4.68s2.59.04 2.59-2.52V4.8s.35-2.8-4.52-2.8zM9.44 3.56a.91.91 0 1 1 0 1.82.91.91 0 0 1 0-1.82z" fill="#3776AB"/><path d="M12.13 22c5.18 0 4.84-2.25 4.84-2.25l-.01-2.33h-4.9v-.7h6.79s3.15.37 3.15-4.84c0-5.21-2.76-5.03-2.76-5.03h-1.64v2.34s.09 2.76-2.72 2.76h-4.68s-2.59-.04-2.59 2.52v4.73s-.35 2.8 4.52 2.8zm2.43-1.56a.91.91 0 1 1 0-1.82.91.91 0 0 1 0 1.82z" fill="#FFD43B"/></svg>`,
+            "HTML": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4L4.5 3z" fill="#E44D26"/><path d="M12 4.8v14.4l4.6-1.8 1.1-12.6H12z" fill="#F16529"/><path d="M8.5 7.5h7l-.2 2.5H8.7l.2 2.5h6.4l-.5 5.5-2.8 1.1-2.8-1.1-.2-2.5H6.5l.3 4.5 5.2 2 5.2-2 .7-8H8.5z" fill="#FFFFFF"/></svg>`,
+            "HTML5": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4L4.5 3z" fill="#E44D26"/><path d="M12 4.8v14.4l4.6-1.8 1.1-12.6H12z" fill="#F16529"/><path d="M8.5 7.5h7l-.2 2.5H8.7l.2 2.5h6.4l-.5 5.5-2.8 1.1-2.8-1.1-.2-2.5H6.5l.3 4.5 5.2 2 5.2-2 .7-8H8.5z" fill="#FFFFFF"/></svg>`,
+            "CSS": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4L4.5 3z" fill="#264DE4"/><path d="M12 4.8v14.4l4.6-1.8 1.1-12.6H12z" fill="#2965F1"/><path d="M8.5 7.5h7l-.2 2.5H8.7l.2 2.5h6.4l-.5 5.5-2.8 1.1-2.8-1.1-.2-2.5H6.5l.3 4.5 5.2 2 5.2-2 .7-8H8.5z" fill="#FFFFFF"/></svg>`,
+            "CSS3": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4L4.5 3z" fill="#264DE4"/><path d="M12 4.8v14.4l4.6-1.8 1.1-12.6H12z" fill="#2965F1"/><path d="M8.5 7.5h7l-.2 2.5H8.7l.2 2.5h6.4l-.5 5.5-2.8 1.1-2.8-1.1-.2-2.5H6.5l.3 4.5 5.2 2 5.2-2 .7-8H8.5z" fill="#FFFFFF"/></svg>`,
+            "HTML5/CSS3": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4.5 3h15l-1.4 15.6L12 21l-6.1-2.4L4.5 3z" fill="#E44D26"/><path d="M12 4.8v14.4l4.6-1.8 1.1-12.6H12z" fill="#2965F1"/></svg>`,
+            "JavaScript": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 18.5l1.8-1.1c.4.7.8 1.2 1.6 1.2.8 0 1.3-.3 1.3-1.1v-6.3h2.3v6.4c0 2-1.2 2.9-3.2 2.9-1.8 0-2.9-.9-3.8-2zm8.4 0l1.8-1.1c.5.8 1.2 1.3 2.2 1.3.9 0 1.5-.4 1.5-1 0-.6-.4-.9-1.6-1.4l-.8-.3c-1.6-.7-2.6-1.5-2.6-3.3 0-1.8 1.4-3.2 3.6-3.2 1.6 0 2.8.6 3.5 1.9l-1.7 1.1c-.4-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3.9 0 .6.4.9 1.5 1.3l.8.3c1.9.8 2.8 1.6 2.8 3.4 0 2.1-1.6 3.3-3.9 3.3-2.2 0-3.6-1-4.3-2.3z" fill="#000000"/></svg>`,
+            "JavaScript (ES6+)": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 18.5l1.8-1.1c.4.7.8 1.2 1.6 1.2.8 0 1.3-.3 1.3-1.1v-6.3h2.3v6.4c0 2-1.2 2.9-3.2 2.9-1.8 0-2.9-.9-3.8-2zm8.4 0l1.8-1.1c.5.8 1.2 1.3 2.2 1.3.9 0 1.5-.4 1.5-1 0-.6-.4-.9-1.6-1.4l-.8-.3c-1.6-.7-2.6-1.5-2.6-3.3 0-1.8 1.4-3.2 3.6-3.2 1.6 0 2.8.6 3.5 1.9l-1.7 1.1c-.4-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3.9 0 .6.4.9 1.5 1.3l.8.3c1.9.8 2.8 1.6 2.8 3.4 0 2.1-1.6 3.3-3.9 3.3-2.2 0-3.6-1-4.3-2.3z" fill="#000000"/></svg>`,
+            "HTML/CSS/JavaScript": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 18.5l1.8-1.1c.4.7.8 1.2 1.6 1.2.8 0 1.3-.3 1.3-1.1v-6.3h2.3v6.4c0 2-1.2 2.9-3.2 2.9-1.8 0-2.9-.9-3.8-2zm8.4 0l1.8-1.1c.5.8 1.2 1.3 2.2 1.3.9 0 1.5-.4 1.5-1 0-.6-.4-.9-1.6-1.4l-.8-.3c-1.6-.7-2.6-1.5-2.6-3.3 0-1.8 1.4-3.2 3.6-3.2 1.6 0 2.8.6 3.5 1.9l-1.7 1.1c-.4-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3.9 0 .6.4.9 1.5 1.3l.8.3c1.9.8 2.8 1.6 2.8 3.4 0 2.1-1.6 3.3-3.9 3.3-2.2 0-3.6-1-4.3-2.3z" fill="#000000"/></svg>`,
             "Pandas": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="3" height="18" rx="1.5" fill="#00f2fe"/><rect x="9" y="7" width="3" height="10" rx="1.5" fill="#00ffcc"/><rect x="14" y="10" width="3" height="11" rx="1.5" fill="#38bdf8"/><rect x="19" y="5" width="2" height="6" rx="1" fill="#00f2fe"/></svg>`,
             "NumPy": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#4DABCF"/><path d="M2 17l10 5 10-5" stroke="#00ffcc" stroke-width="1.5"/><path d="M2 12l10 5 10-5" stroke="#4DABCF" stroke-width="1.5"/></svg>`,
             "Scikit-learn": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#F7931E" stroke-width="2"/><path d="M7 12a5 5 0 0 1 10 0" stroke="#3499CC" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#F7931E"/></svg>`,
             "PyTorch": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M14.5 4.5a7 7 0 1 0 3 11.5l2 2a9.5 9.5 0 1 1-3.5-15.5l-1.5 2z" fill="#EE4C2C"/><circle cx="16.5" cy="5.5" r="1.5" fill="#EE4C2C"/></svg>`,
             "FastAPI": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#059669" fill-opacity="0.25" stroke="#10B981" stroke-width="1.5"/><path d="M13 3L4 14h7l-2 7 9-11h-7l2-7z" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+            "Flask": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><path d="M10 2v7.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2h-4z"/></svg>`,
             "React": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>`,
             "React 18": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>`,
+            "React 19": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>`,
             "Streamlit": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><polygon points="12 2 22 20 2 20" fill="#FF4B4B"/><polygon points="12 8 18 19 6 19" fill="#FFFFFF" fill-opacity="0.3"/></svg>`,
             "Git": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M21.7 10.7l-8.4-8.4c-.4-.4-1-.4-1.4 0l-1.9 1.9 2.4 2.4c.4-.1.9 0 1.2.3.5.5.5 1.3 0 1.8-.4.4-1.1.5-1.6.2l-2.3 2.3v3.1c.3.2.5.5.5.9 0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3 0-.4.2-.7.5-.9v-3.7c-.3-.2-.5-.5-.5-.9 0-.4.2-.7.5-.9l2.2-2.2v-2.7c-.3-.2-.5-.5-.5-.9 0-.7.6-1.3 1.3-1.3.4 0 .7.2.9.5l1.9-1.9L2.3 10.7c-.4.4-.4 1 0 1.4l8.4 8.4c.4.4 1 .4 1.4 0l9.6-9.6c.4-.4.4-1.1 0-1.5z" fill="#F05032"/></svg>`,
             "Microsoft SQL Server": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#CC292B" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>`,
@@ -1054,18 +1066,25 @@ function initProjectModal() {
             "RAG": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>`,
             "Ollama / Local AI": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>`,
             "Ollama": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>`,
+            "Llama 3.2": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>`,
             "Tailwind CSS": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z" fill="#38BDF8"/></svg>`,
             "Vite": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M21.75 3.75L12 21 2.25 3.75h19.5z" fill="#BD34FE"/><path d="M16.5 3.75L12 12 7.5 3.75h9z" fill="#FFC400"/></svg>`,
             "Firebase": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M3.89 15.67L6.8 2.37a.64.64 0 0 1 1.22-.05l2.4 4.54L3.89 15.67z" fill="#FFC107"/><path d="M13.47 8.35l2.09-3.95a.64.64 0 0 1 1.14.07l3.41 11.2-6.64-7.32z" fill="#FFA000"/><path d="M3.89 15.67l8.28 4.67a1.64 1.64 0 0 0 1.6 0l6.34-3.57-6.64-7.32-9.58 6.22z" fill="#FFCA28"/></svg>`,
-            "JWT": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`
+            "JWT": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
+            "JWT Authentication": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
+            "GitHub Actions": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2088FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>`,
+            "FontAwesome": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" fill="#339AF0"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L2 6v11l10 5 10-5V6l-10 5z"/></svg>`,
+            "Font Awesome": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" fill="#339AF0"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L2 6v11l10 5 10-5V6l-10 5z"/></svg>`,
+            "Tesseract": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>`,
+            "OCR": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2"/></svg>`,
+            "PDF Extraction": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FF4B4B" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+            "Automated Backup": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`,
+            "NSSM": `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="18" y2="12"/></svg>`
         };
 
         if (descEl) descEl.textContent = projData.desc;
         if (techContainer) {
-            techContainer.innerHTML = projData.tech.map(t => {
-                const svg = techSvgMap[t] || `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00ffcc" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>`;
-                return `<div class="modal-tech-logo-item" title="${t}">${svg}</div>`;
-            }).join('');
+            techContainer.innerHTML = projData.tech.map(t => `<span class="modal-tech-tag">${t}</span>`).join('');
         }
 
         // Render point-by-point features
