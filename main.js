@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         initHeroAnimations();
     });
 
+    // --- MOBILE NAVIGATION TOGGLE ---
+    initMobileNav();
+
     // --- MAIN 3D BACKGROUND ---
     initMainBackground();
 
@@ -26,6 +29,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CONTACT FORM MAILTO INTEGRATION ---
     initContactForm();
 });
+
+// --- MOBILE NAVIGATION TOGGLE MENU ---
+function initMobileNav() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (!navToggle || !navLinks) return;
+
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking nav items
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('active');
+        }
+    });
+}
 
 // --- CONTACT FORM DIRECT EMAIL FORWARDING ---
 function initContactForm() {

@@ -1665,7 +1665,7 @@ section {
 
 .modal-features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 12px;
 }
 
@@ -2111,16 +2111,511 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .glitch-text { font-size: 4rem; }
-    .hero h2 { font-size: 1.8rem; }
-    .about-container { grid-template-columns: 1fr; }
-    .input-group { flex-direction: column; }
-    .contact-box { padding: 30px; }
-    .timeline-container { padding-left: 30px; }
-    .timeline-line { left: 8px; }
-    .timeline-dot { left: -30px; width: 14px; height: 14px; }
-    .experience-card { padding: 22px; }
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE STYLES (MOBILE, TABLET, LAPTOP, DESKTOP)
+   ========================================================================== */
+
+/* Mobile Navigation Hamburger Button */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 242, 254, 0.35);
+    background: rgba(8, 14, 24, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 14px rgba(0, 255, 204, 0.4);
+}
+
+.nav-toggle .bar {
+    width: 22px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 6px var(--secondary-color);
+}
+
+.nav-toggle.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.nav-toggle.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Large Tablet & Small Laptops (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+    section {
+        padding: 80px 0;
+        min-height: auto;
+    }
+    
+    .cyber-modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    .cyber-about-title {
+        font-size: 2.2rem;
+    }
+
+    .project-modal-container {
+        width: 95%;
+        max-height: 92vh;
+        padding: 28px 24px;
+    }
+}
+
+/* --- Medium Tablets (Max Width: 850px) --- */
+@media (max-width: 850px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 340px;
+        height: 100vh;
+        background: rgba(4, 8, 16, 0.96);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(0, 242, 254, 0.35);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        padding: 50px 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.15rem;
+        letter-spacing: 2px;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .cyber-about-section {
+        padding: 70px 0 40px 0;
+    }
+
+    .cyber-about-title {
+        font-size: 2.0rem;
+    }
+
+    .cyber-console-card {
+        border-radius: 16px;
+    }
+
+    .console-body {
+        padding: 22px 20px;
+    }
+
+    .cyber-modules-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cyber-telemetry-bar {
+        padding: 14px 20px;
+        gap: 18px;
+    }
+
+    .telemetry-divider {
+        display: none;
+    }
+
+    .glitch-text {
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+    }
+
+    .hero h2 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        min-height: auto;
+    }
+
+    .hero-action-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .hero-social-icons {
+        gap: 12px;
+    }
+
+    .timeline-container {
+        padding-left: 32px;
+    }
+
+    .timeline-line {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: -32px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .experience-card {
+        padding: 22px 20px;
+    }
+
+    .exp-role {
+        font-size: 1.25rem;
+    }
+
+    .reel-filter-bar {
+        gap: 8px;
+    }
+
+    .reel-filter-btn {
+        font-size: 0.76rem;
+        padding: 6px 12px;
+    }
+
+    .dispenser-bar {
+        padding: 10px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-box {
+        padding: 35px 24px;
+        border-radius: 18px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+/* --- Mobile Portrait & Small Screens (Max Width: 576px) --- */
+@media (max-width: 576px) {
+    main {
+        padding: 0 4%;
+    }
+
+    .section-title {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+
+    .cyber-loader-container {
+        padding: 30px 18px;
+        width: 94%;
+        border-radius: 20px;
+    }
+
+    .loader-core-wrapper {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 18px;
+    }
+
+    .loader-logo-badge {
+        font-size: 1.6rem;
+    }
+
+    .loader-telemetry-header {
+        font-size: 0.65rem;
+        left: 15px;
+        right: 15px;
+    }
+
+    .loader-telemetry-header .telemetry-item:nth-child(2) {
+        display: none;
+    }
+
+    .tagline {
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+    }
+
+    .glitch-text {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 0.98rem;
+        margin-bottom: 28px;
+    }
+
+    .btn-group {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    .cyber-about-title {
+        font-size: 1.7rem;
+    }
+
+    .cyber-about-lead {
+        font-size: 0.95rem;
+    }
+
+    .console-top-bar {
+        padding: 10px 14px;
+    }
+
+    .console-title-text {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    .console-status-badge {
+        font-size: 0.66rem;
+    }
+
+    .console-bio-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .cyber-module-card {
+        padding: 20px 16px;
+    }
+
+    .module-title {
+        font-size: 1.05rem;
+    }
+
+    .module-desc {
+        font-size: 0.85rem;
+    }
+
+    .telemetry-badge {
+        gap: 8px;
+    }
+
+    .telemetry-num {
+        font-size: 1.25rem;
+    }
+
+    .telemetry-label {
+        font-size: 0.78rem;
+    }
+
+    .tech-marquee-wrapper {
+        padding: 10px 0;
+    }
+
+    .tech-marquee-track {
+        gap: 25px;
+    }
+
+    .tech-logo-item {
+        width: 44px;
+        height: 44px;
+    }
+
+    .tech-logo-item svg,
+    .tech-logo-item img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .timeline-container {
+        padding-left: 24px;
+    }
+
+    .timeline-line {
+        left: 6px;
+    }
+
+    .timeline-dot {
+        left: -24px;
+        width: 12px;
+        height: 12px;
+        top: 20px;
+    }
+
+    .experience-card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .exp-date {
+        font-size: 0.78rem;
+        padding: 3px 10px;
+    }
+
+    .exp-role {
+        font-size: 1.12rem;
+    }
+
+    .exp-company {
+        font-size: 0.88rem;
+    }
+
+    .exp-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .exp-tags {
+        gap: 6px;
+    }
+
+    .exp-tags span {
+        font-size: 0.75rem;
+        padding: 3px 9px;
+    }
+
+    .reel-issuing-counter {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
+
+    .dispenser-status-pill {
+        font-size: 0.68rem;
+    }
+
+    .dispenser-label {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    .project-modal-container {
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .modal-num {
+        font-size: 0.78rem;
+    }
+
+    .modal-badge {
+        font-size: 0.72rem;
+        padding: 3px 10px;
+    }
+
+    .modal-title {
+        font-size: 1.35rem;
+    }
+
+    .modal-impact {
+        font-size: 0.85rem;
+    }
+
+    .modal-desc {
+        font-size: 0.9rem;
+    }
+
+    .modal-features-section h4,
+    .modal-tech-section h4 {
+        font-size: 0.78rem;
+    }
+
+    .feature-item-card {
+        padding: 12px 10px;
+    }
+
+    .feature-item-title {
+        font-size: 0.88rem;
+    }
+
+    .feature-item-desc {
+        font-size: 0.8rem;
+    }
+
+    .contact-box {
+        padding: 26px 16px;
+    }
+
+    .contact-icons-row {
+        gap: 14px;
+    }
+
+    .contact-icon-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+    }
+
+    .contact-icon-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 0.92rem;
+    }
+
+    .ticket-dispenser-viewport {
+        height: 380px;
+    }
+
+    .project-ticket-card {
+        padding: 20px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ticket-graphic-col,
+    .ticket-side-tab {
+        display: none;
+    }
+
+    .ticket-title {
+        font-size: 1.35rem;
+        margin-bottom: 6px;
+    }
+
+    .ticket-desc {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 3;
+    }
 }
