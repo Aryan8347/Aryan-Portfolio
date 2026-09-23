@@ -1135,58 +1135,62 @@ function initHeroAnimations() {
       .from('.btn-group', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
 }
 
+// --- SCROLL & TIMELINE PROGRESS ANIMATIONS ---
 function initScrollAnimations() {
-    gsap.registerPlugin(ScrollTrigger);
+    // 1. Intersection Observer for section entry visibility
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, observerOptions);
 
-    // About Section
-    gsap.from('.about-text > *', {
-        scrollTrigger: {
-            trigger: '.about',
-            start: 'top 70%'
-        },
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power3.out'
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
     });
 
-    gsap.from('.about-3d', {
-        scrollTrigger: {
-            trigger: '.about',
-            start: 'top 70%'
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    });
+    // 2. Dynamic Scroll Fill for Timeline Line & Active Node Dots
+    const timelineContainer = document.querySelector('.timeline-container');
+    const timelineProgress = document.querySelector('.timeline-progress');
+    const timelineDots = document.querySelectorAll('.timeline-dot');
 
-    // Experience Section Line & Card Animations
-    gsap.to('.timeline-progress', {
-        scrollTrigger: {
-            trigger: '.experience',
-            start: 'top 70%',
-            end: 'bottom 80%',
-            scrub: 1
-        },
-        height: '100%',
-        ease: 'none'
-    });
+    function updateTimelineScroll() {
+        if (!timelineContainer || !timelineProgress) return;
 
-    gsap.from('.timeline-item', {
-        scrollTrigger: {
-            trigger: '.experience',
-            start: 'top 70%'
-        },
-        y: 60,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.25,
-        ease: 'power3.out'
-    });
+        const rect = timelineContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    // Spotlight cursor glow tracking on experience cards
+        // Progress line starts filling when top of timeline reaches 65% of viewport height
+        const startPoint = windowHeight * 0.65;
+        const totalHeight = rect.height;
+        const currentScrolled = startPoint - rect.top;
+
+        let pct = (currentScrolled / totalHeight) * 100;
+        pct = Math.max(0, Math.min(100, pct));
+
+        timelineProgress.style.height = `${pct}%`;
+
+        // Highlight timeline node dots when line reaches them
+        if (timelineDots.length) {
+            const progressRect = timelineProgress.getBoundingClientRect();
+            timelineDots.forEach(dot => {
+                const dotRect = dot.getBoundingClientRect();
+                if (progressRect.bottom >= dotRect.top + dotRect.height / 2) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+    }
+
+    window.addEventListener('scroll', updateTimelineScroll, { passive: true });
+    window.addEventListener('resize', updateTimelineScroll, { passive: true });
+    updateTimelineScroll();
+
+    // 3. Spotlight cursor glow tracking on experience cards
     document.querySelectorAll('.experience-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -1197,29 +1201,33 @@ function initScrollAnimations() {
         });
     });
 
-    // Projects Section Command Center
-    gsap.from('.cmd-container', {
-        scrollTrigger: {
-            trigger: '.projects',
-            start: 'top 70%'
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    });
+    // 4. GSAP Animations (if GSAP & ScrollTrigger are available)
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
 
-    // Contact Section
-    gsap.from('.contact-box', {
-        scrollTrigger: {
-            trigger: '.contact',
-            start: 'top 70%'
-        },
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'back.out(1.7)'
-    });
+        gsap.from('.timeline-item', {
+            scrollTrigger: {
+                trigger: '.experience',
+                start: 'top 75%'
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.contact-box', {
+            scrollTrigger: {
+                trigger: '.contact',
+                start: 'top 70%'
+            },
+            scale: 0.9,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'back.out(1.7)'
+        });
+    }
 }
 
 // --- HERO ANIMATIONS ---
@@ -1251,21 +1259,5 @@ function initTerminalTabs() {
             const targetPane = document.getElementById(targetId);
             if (targetPane) targetPane.classList.add('active');
         });
-    });
-}
-
-// --- SCROLL ANIMATIONS ---
-function initScrollAnimations() {
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
     });
 }
